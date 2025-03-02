@@ -1,3 +1,4 @@
+{{with .Params.hero}}
 <div class="elementor-element elementor-element-9912efd e-flex e-con-boxed e-con e-parent e-lazyloaded"
     data-id="9912efd" data-element_type="container"
     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -18,7 +19,7 @@
                     <p>{{.Description}}</p>
                 </div>
             </div>
-            {{with .Params.rating}}
+            {{with .rating}}
             <div class="elementor-element elementor-element-a118588 e-con-full e-flex e-con e-child" data-id="a118588"
                 data-element_type="container">
                 <div class="elementor-element elementor-element-fc46974 e-con-full e-flex e-con e-child"
@@ -137,7 +138,7 @@
             </div>
             {{ end }}
 
-            {{ with .Params.mentions}}
+            {{ with .mentions}}
             <div class="elementor-element elementor-element-adb0485 e-con-full e-flex e-con e-child" data-id="adb0485"
                 data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div class="elementor-element elementor-element-3b31b2b elementor-widget elementor-widget-heading"
@@ -157,7 +158,7 @@
             </div>
             {{ end }}
         </div>
-        {{with .Params.showSignUpform}}
+        {{with .showSignUpform}}
         <div class="elementor-element elementor-element-48f2b66 e-con-full e-flex e-con e-child" data-id="48f2b66"
             data-element_type="container">
             <div class="elementor-element elementor-element-c60ce2b e-con-full e-flex e-con e-child" data-id="c60ce2b"
@@ -248,3 +249,4 @@
         {{end}}
     </div>
 </div>
+{{end}}
