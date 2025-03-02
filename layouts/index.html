@@ -559,7 +559,7 @@
 </div>
 {{end}}
 
-s
+{{ with .Params.section_7 }}
 <div class="elementor-element elementor-element-276d812 e-flex e-con-boxed e-con e-parent" data-id="276d812"
     data-element_type="container">
     <div class="e-con-inner">
@@ -568,25 +568,22 @@ s
             <div class="elementor-element elementor-element-42c6057 elementor-widget__width-inherit elementor-widget elementor-widget-heading"
                 data-id="42c6057" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">Transform Your Trading Approach
+                    <h2 class="elementor-heading-title elementor-size-default">{{.title}}
                     </h2>
                 </div>
             </div>
             <div class="elementor-element elementor-element-96cfb0b elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor"
                 data-id="96cfb0b" data-element_type="widget" data-widget_type="text-editor.default">
                 <div class="elementor-widget-container">
-                    <p>Discover the next generation of asset trading with Quantum AI. This revolutionary blend
-                        of artificial intelligence and comprehensive data analytics delivers extraordinary
-                        trading capabilities. Quantum AI enables traders to tackle market challenges with
-                        unparalleled precision and sophistication.</p>
+                    <p>{{.description}}</p>
                 </div>
             </div>
             <div class="elementor-element elementor-element-7d16b8e elementor-align-center elementor-widget elementor-widget-button"
                 data-id="7d16b8e" data-element_type="widget" data-widget_type="button.default">
                 <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
-                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                            href="https://unmeilleuravenir.com/#sign-up">
+                        {{with .button}}
+                        <a class="elementor-button elementor-button-link elementor-size-sm" href="{{.link}}">
                             <span class="elementor-button-content-wrapper">
                                 <span class="elementor-button-icon">
                                     <svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right"
@@ -595,15 +592,19 @@ s
                                             d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
                                         </path>
                                     </svg> </span>
-                                <span class="elementor-button-text">Get Started</span>
+                                <span class="elementor-button-text">{{.text}}</span>
                             </span>
                         </a>
+                        {{end}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+{{end }}
+
+{{ with .Params.section_8 }}
 <div class="elementor-element elementor-element-a30d7b8 e-flex e-con-boxed e-con e-parent" data-id="a30d7b8"
     data-element_type="container">
     <div class="e-con-inner">
@@ -612,18 +613,18 @@ s
             <div class="elementor-element elementor-element-45dc4b0 elementor-widget__width-inherit elementor-widget elementor-widget-heading"
                 data-id="45dc4b0" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">Quantum AI Overview
+                    <h2 class="elementor-heading-title elementor-size-default">{{.title}}
                     </h2>
                 </div>
             </div>
             <div class="elementor-element elementor-element-03c4f9d elementor-widget__width-inherit elementor-widget elementor-widget-text-editor"
                 data-id="03c4f9d" data-element_type="widget" data-widget_type="text-editor.default">
                 <div class="elementor-widget-container">
-                    <p>Experience trading powered by sophisticated AI, enjoy effortless deposits, and benefit
-                        from compatibility across multiple devices and worldwide access. Tap into your trading
-                        potential now.</p>
+                    <p>{{.description}}</p>
                 </div>
             </div>
+
+            {{range .features}}
             <div class="elementor-element elementor-element-4769071 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
                 data-id="4769071" data-element_type="widget" data-widget_type="divider.default">
                 <div class="elementor-widget-container">
@@ -633,6 +634,7 @@ s
                     </div>
                 </div>
             </div>
+
             <div class="elementor-element elementor-element-45b520b e-con-full e-flex e-con e-child" data-id="45b520b"
                 data-element_type="container">
                 <div class="elementor-element elementor-element-9eb6d5c e-con-full e-flex e-con e-child"
@@ -645,11 +647,10 @@ s
                                     <span class="elementor-icon-list-icon">
                                         <svg aria-hidden="true" class="e-font-icon-svg e-far-window-maximize"
                                             viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 394c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V192h416v234z">
+                                            <path d="{{.icon}}">
                                             </path>
                                         </svg> </span>
-                                    <span class="elementor-icon-list-text">Platform Accessibility</span>
+                                    <span class="elementor-icon-list-text">{{.title}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -660,139 +661,15 @@ s
                     <div class="elementor-element elementor-element-e14772a elementor-widget__width-inherit elementor-widget elementor-widget-text-editor"
                         data-id="e14772a" data-element_type="widget" data-widget_type="text-editor.default">
                         <div class="elementor-widget-container">
-                            <p>Easily accessible through any web browser</p>
+                            <p>{{.description}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-9e056ee elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                data-id="9e056ee" data-element_type="widget" data-widget_type="divider.default">
-                <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                        <span class="elementor-divider-separator">
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-ef5adb0 e-con-full e-flex e-con e-child" data-id="ef5adb0"
-                data-element_type="container">
-                <div class="elementor-element elementor-element-cc2a137 e-con-full e-flex e-con e-child"
-                    data-id="cc2a137" data-element_type="container">
-                    <div class="elementor-element elementor-element-08da405 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                        data-id="08da405" data-element_type="widget" data-widget_type="icon-list.default">
-                        <div class="elementor-widget-container">
-                            <ul class="elementor-icon-list-items">
-                                <li class="elementor-icon-list-item">
-                                    <span class="elementor-icon-list-icon">
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-far-window-restore"
-                                            viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M464 0H144c-26.5 0-48 21.5-48 48v48H48c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-96 464H48V256h320v208zm96-96h-48V144c0-26.5-21.5-48-48-48H144V48h320v320z">
-                                            </path>
-                                        </svg> </span>
-                                    <span class="elementor-icon-list-text">Payment Options</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-d1cba82 e-con-full e-flex e-con e-child"
-                    data-id="d1cba82" data-element_type="container">
-                    <div class="elementor-element elementor-element-640d817 elementor-widget__width-inherit elementor-widget elementor-widget-text-editor"
-                        data-id="640d817" data-element_type="widget" data-widget_type="text-editor.default">
-                        <div class="elementor-widget-container">
-                            <p>Diverse deposit methods including Credit/Debit Cards, Bank Transfers, Skrill,
-                                Neteller, and PayPal</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-acfe84f elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                data-id="acfe84f" data-element_type="widget" data-widget_type="divider.default">
-                <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                        <span class="elementor-divider-separator">
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-fe36c3a e-con-full e-flex e-con e-child" data-id="fe36c3a"
-                data-element_type="container">
-                <div class="elementor-element elementor-element-6d89a89 e-con-full e-flex e-con e-child"
-                    data-id="6d89a89" data-element_type="container">
-                    <div class="elementor-element elementor-element-875fbe2 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                        data-id="875fbe2" data-element_type="widget" data-widget_type="icon-list.default">
-                        <div class="elementor-widget-container">
-                            <ul class="elementor-icon-list-items">
-                                <li class="elementor-icon-list-item">
-                                    <span class="elementor-icon-list-icon">
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-globe-europe"
-                                            viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm200 248c0 22.5-3.9 44.2-10.8 64.4h-20.3c-4.3 0-8.4-1.7-11.4-4.8l-32-32.6c-4.5-4.6-4.5-12.1.1-16.7l12.5-12.5v-8.7c0-3-1.2-5.9-3.3-8l-9.4-9.4c-2.1-2.1-5-3.3-8-3.3h-16c-6.2 0-11.3-5.1-11.3-11.3 0-3 1.2-5.9 3.3-8l9.4-9.4c2.1-2.1 5-3.3 8-3.3h32c6.2 0 11.3-5.1 11.3-11.3v-9.4c0-6.2-5.1-11.3-11.3-11.3h-36.7c-8.8 0-16 7.2-16 16v4.5c0 6.9-4.4 13-10.9 15.2l-31.6 10.5c-3.3 1.1-5.5 4.1-5.5 7.6v2.2c0 4.4-3.6 8-8 8h-16c-4.4 0-8-3.6-8-8s-3.6-8-8-8H247c-3 0-5.8 1.7-7.2 4.4l-9.4 18.7c-2.7 5.4-8.2 8.8-14.3 8.8H194c-8.8 0-16-7.2-16-16V199c0-4.2 1.7-8.3 4.7-11.3l20.1-20.1c4.6-4.6 7.2-10.9 7.2-17.5 0-3.4 2.2-6.5 5.5-7.6l40-13.3c1.7-.6 3.2-1.5 4.4-2.7l26.8-26.8c2.1-2.1 3.3-5 3.3-8 0-6.2-5.1-11.3-11.3-11.3H258l-16 16v8c0 4.4-3.6 8-8 8h-16c-4.4 0-8-3.6-8-8v-20c0-2.5 1.2-4.9 3.2-6.4l28.9-21.7c1.9-.1 3.8-.3 5.7-.3C358.3 56 448 145.7 448 256zM130.1 149.1c0-3 1.2-5.9 3.3-8l25.4-25.4c2.1-2.1 5-3.3 8-3.3 6.2 0 11.3 5.1 11.3 11.3v16c0 3-1.2 5.9-3.3 8l-9.4 9.4c-2.1 2.1-5 3.3-8 3.3h-16c-6.2 0-11.3-5.1-11.3-11.3zm128 306.4v-7.1c0-8.8-7.2-16-16-16h-20.2c-10.8 0-26.7-5.3-35.4-11.8l-22.2-16.7c-11.5-8.6-18.2-22.1-18.2-36.4v-23.9c0-16 8.4-30.8 22.1-39l42.9-25.7c7.1-4.2 15.2-6.5 23.4-6.5h31.2c10.9 0 21.4 3.9 29.6 10.9l43.2 37.1h18.3c8.5 0 16.6 3.4 22.6 9.4l17.3 17.3c3.4 3.4 8.1 5.3 12.9 5.3H423c-32.4 58.9-93.8 99.5-164.9 103.1z">
-                                            </path>
-                                        </svg> </span>
-                                    <span class="elementor-icon-list-text">Availability</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-03570bd e-con-full e-flex e-con e-child"
-                    data-id="03570bd" data-element_type="container">
-                    <div class="elementor-element elementor-element-70be5de elementor-widget__width-inherit elementor-widget elementor-widget-text-editor"
-                        data-id="70be5de" data-element_type="widget" data-widget_type="text-editor.default">
-                        <div class="elementor-widget-container">
-                            <p>Operational in Canada, Australia, European countries (like France, Germany,
-                                Italy, Netherlands, United Kingdom, and more), the Americas (with the exception
-                                of the USA), and Asia</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-9be32d4 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                data-id="9be32d4" data-element_type="widget" data-widget_type="divider.default">
-                <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                        <span class="elementor-divider-separator">
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-f7c8fd4 e-con-full e-flex e-con e-child" data-id="f7c8fd4"
-                data-element_type="container">
-                <div class="elementor-element elementor-element-e1e56d0 e-con-full e-flex e-con e-child"
-                    data-id="e1e56d0" data-element_type="container">
-                    <div class="elementor-element elementor-element-1a53be1 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                        data-id="1a53be1" data-element_type="widget" data-widget_type="icon-list.default">
-                        <div class="elementor-widget-container">
-                            <ul class="elementor-icon-list-items">
-                                <li class="elementor-icon-list-item">
-                                    <span class="elementor-icon-list-icon">
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-credit-card"
-                                            viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M0 432c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V256H0v176zm192-68c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-40zm-128 0c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM576 80v48H0V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48z">
-                                            </path>
-                                        </svg> </span>
-                                    <span class="elementor-icon-list-text">Cost of Use</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-fcd3700 e-con-full e-flex e-con e-child"
-                    data-id="fcd3700" data-element_type="container">
-                    <div class="elementor-element elementor-element-a5d8328 elementor-widget__width-inherit elementor-widget elementor-widget-text-editor"
-                        data-id="a5d8328" data-element_type="widget" data-widget_type="text-editor.default">
-                        <div class="elementor-widget-container">
-                            <p>Zero fees for account setup; $250 minimum deposit for trading.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{end}}
         </div>
     </div>
 </div>
+{{ end }}
 
 {{ end }}
