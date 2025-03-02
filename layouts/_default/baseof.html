@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+
+{{ partial "head.html" . }}
+
+<body
+    class="home page-template page-template-elementor_header_footer page page-id-8 wp-custom-logo wp-embed-responsive theme-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-8 e--ua-blink e--ua-chrome e--ua-webkit">
+    {{ partial "header.html" . }}
+    <main>
+        <div data-elementor-type="wp-page" data-elementor-id="8" class="elementor elementor-8"
+            data-elementor-post-type="page">
+
+            {{ partial "hero.html" . }}
+            {{ block "main" . }}{{ end }}
+
+        </div>
+    </main>
+    {{ partial "footer.html" . }}
+    {{ partial "js.html" . }}
+</body>
+
+</html>

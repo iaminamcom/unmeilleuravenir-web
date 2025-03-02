@@ -1,0 +1,9 @@
+baseURL: /
+languageCode: en-us
+title: Smartest.com
+disableKinds:
+  - taxonomy
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
