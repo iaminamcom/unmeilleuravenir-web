@@ -8,7 +8,7 @@
                 <div class="elementor-element elementor-element-8ee50c3 elementor-widget elementor-widget-image"
                     data-id="8ee50c3" data-element_type="widget" data-widget_type="image.default">
                     <div class="elementor-widget-container">
-                        <img width="800" height="134" src="./unmeilleuravenir.com_files/Asset-8-8-1024x172.png"
+                        <img width="800" height="134" src="/unmeilleuravenir.com_files/Asset-8-8-1024x172.png"
                             class="attachment-large size-large wp-image-27" alt=""
                             srcset="https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8-1024x172.png 1024w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8-300x50.png 300w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8-768x129.png 768w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8-1536x258.png 1536w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8.png 1702w"
                             sizes="(max-width: 800px) 100vw, 800px">
@@ -52,18 +52,14 @@
                     data-id="0661ba0" data-element_type="widget" data-widget_type="icon-list.default">
                     <div class="elementor-widget-container">
                         <ul class="elementor-icon-list-items">
+                            {{ range site.Menus.main }}
                             <li class="elementor-icon-list-item">
-                                <a href="https://unmeilleuravenir.com/home/">
+                                <a href="{{ .URL }}">
 
-                                    <span class="elementor-icon-list-text">Home</span>
+                                    <span class="elementor-icon-list-text">{{ .Name }}</span>
                                 </a>
                             </li>
-                            <li class="elementor-icon-list-item">
-                                <a href="https://unmeilleuravenir.com/about/">
-
-                                    <span class="elementor-icon-list-text">About</span>
-                                </a>
-                            </li>
+                            {{ end }}
                         </ul>
                     </div>
                 </div>

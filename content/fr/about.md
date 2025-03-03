@@ -2,6 +2,8 @@
 title: Embrace the Future of AI-Powered Trading
 description: Ready to elevate your market game? Quantum AI is here to revolutionize your trading experience. Our advanced AI technology empowers you to make more intelligent and strategic decisions, unlocking the potential for substantial gains.
 
+menu: { main: { name: "A propos", weight: 2 } }
+
 hero:
     rating:
         text: Rated 4.8 stars&nbsp;by over&nbsp;
@@ -9,7 +11,7 @@ hero:
 
     mentions:
         title: As seen on
-        logoimage: ./unmeilleuravenir.com_files/Screenshot_1.png
+        logoimage: /unmeilleuravenir.com_files/Screenshot_1.png
         
     showSignUpform: no
 

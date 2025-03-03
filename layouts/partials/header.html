@@ -27,14 +27,12 @@
                         <nav aria-label="Menu"
                             class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
                             <ul id="menu-1-742f3dd" class="elementor-nav-menu" data-smartmenus-id="17409166456917346">
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-17">
-                                    <a href="https://unmeilleuravenir.com/" aria-current="page"
-                                        class="elementor-item elementor-item-active">Home</a>
+                                {{ range site.Menus.main }}
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a class="elementor-item {{ if $.IsMenuCurrent .Menu . }}elementor-item-active{{ end }}"
+                                        href="{{ .URL }}">{{ .Name }}</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a
-                                        href="https://unmeilleuravenir.com/about/" class="elementor-item">About</a>
-                                </li>
+                                {{ end }}
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
@@ -56,14 +54,12 @@
                         <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true"
                             style="width: 1519px; left: 0px; top: 44px;">
                             <ul id="menu-2-742f3dd" class="elementor-nav-menu" data-smartmenus-id="1740916645691473">
-                                <li
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-17">
-                                    <a href="https://unmeilleuravenir.com/" aria-current="page"
-                                        class="elementor-item elementor-item-active" tabindex="-1">Home</a>
+                                {{ range site.Menus.main }}
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                    <a class="elementor-item {{ if $.IsMenuCurrent .Menu . }}elementor-item-active{{ end }}"
+                                        tabindex="-1" href="{{ .URL }}">{{ .Name}}</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a
-                                        href="https://unmeilleuravenir.com/about/" class="elementor-item"
-                                        tabindex="-1">About</a></li>
+                                {{ end }}
                             </ul>
                         </nav>
                     </div>
@@ -89,14 +85,15 @@
                     <div class="elementor-widget-container">
                         <div class="elementor-shortcode">
                             <div>
-                                <a href="https://unmeilleuravenir.com/#" title="English"><img loading="lazy"
-                                        src="./unmeilleuravenir.com_files/en.svg" width="24" height="24" alt="en">
+                                {{ with .Translations }}
+                                {{ range . }}
+                                {{$code := .Language.LanguageCode}}
+                                <a href="{{ .RelPermalink }}" hreflang="{{ $code }}">
+                                    <img loading="lazy" src="/unmeilleuravenir.com_files/{{$code}}.svg" width="24"
+                                        height="24" alt="{{$code}}">
                                 </a>
-                                <a href="https://unmeilleuravenir.com/#" title="French" data-gt-lang="fr"><img
-                                        loading="lazy" src="./unmeilleuravenir.com_files/fr.svg" width="24" height="24"
-                                        alt="fr">
-                                </a>
-                                <!-- <div id="google_translate_element2"></div> -->
+                                {{ end }}
+                                {{ end }}
                             </div>
                         </div>
                     </div>
