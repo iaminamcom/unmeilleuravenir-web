@@ -34,7 +34,8 @@
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
-                            aria-expanded="false" style="">
+                            aria-expanded="false" style=""
+                            onclick="this.classList.toggle('elementor-active');var hqa=document.getElementById('header-quick-actions');hqa.style.display = hqa.style.display === 'none' ? 'flex' : 'none';">
                             <svg aria-hidden="true" role="presentation"
                                 class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar"
                                 viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
@@ -49,8 +50,8 @@
                                 </path>
                             </svg>
                         </div>
-                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true"
-                            style="width: 1519px; left: 0px; top: 44px;">
+                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container"
+                            style="width: 100vw;position: fixed; left: 0px; top: 44px;z-index: 999999;">
                             <ul id="menu-2-742f3dd" class="elementor-nav-menu" data-smartmenus-id="1740916645691473">
                                 {{ range site.Menus.main }}
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
@@ -64,7 +65,7 @@
                 </div>
             </div>
             <div class="elementor-element elementor-element-2ca23fb e-con-full e-flex e-con e-child" data-id="2ca23fb"
-                data-element_type="container">
+                data-element_type="container" id="header-quick-actions">
                 <div class="elementor-element elementor-element-13050dc elementor-widget elementor-widget-button"
                     data-id="13050dc" data-element_type="widget" data-widget_type="button.default">
                     <div class="elementor-widget-container">
