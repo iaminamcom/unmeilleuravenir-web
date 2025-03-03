@@ -9,34 +9,15 @@
                     data-id="8ee50c3" data-element_type="widget" data-widget_type="image.default">
                     <div class="elementor-widget-container">
                         <img width="800" height="134" src="/unmeilleuravenir.com_files/Asset-8-8-1024x172.png"
-                            class="attachment-large size-large wp-image-27" alt=""
-                            srcset="https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8-1024x172.png 1024w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8-300x50.png 300w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8-768x129.png 768w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8-1536x258.png 1536w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-8-8.png 1702w"
-                            sizes="(max-width: 800px) 100vw, 800px">
+                            class="attachment-large size-large wp-image-27" alt="">
                     </div>
                 </div>
                 <div class="elementor-element elementor-element-fc08488 elementor-widget elementor-widget-text-editor"
                     data-id="fc08488" data-element_type="widget" data-widget_type="text-editor.default">
                     <div class="elementor-widget-container">
-                        <p>Trading offers the potential for profit, but it’s crucial to remember that significant
-                            losses are also a possibility. It’s estimated that around 70% of investors may encounter
-                            financial difficulties.</p>
-                        <p>Please be aware that the names on our website, such as Quantum AI, are purely for
-                            marketing and don’t represent specific entities or service providers. Our website’s
-                            videos are promotional and feature actors, not actual users or traders.</p>
-                        <p>We strongly advise you to thoroughly examine the Terms &amp; Conditions and Disclaimers
-                            of any third-party trading platforms you consider using. It’s also important to
-                            understand your obligations regarding capital gains tax in your jurisdiction. For
-                            example, in the US, trading in commodity options, including ‘prediction’ contracts, is
-                            legal only on exchanges approved by the CFTC or under legal exemption.</p>
-                        <p>In the UK, the Financial Conduct Authority (FCA) has issued policy statement PS20/10,
-                            which bans the marketing, sale, and distribution of certain Contracts for Difference
-                            (CFDs) and limits promotional activities for CFDs and related financial products
-                            targeting UK residents.</p>
-                        <p>By providing your personal information to us, you agree to its sharing with third parties
-                            offering trading services, as outlined in our Privacy Policy and Terms &amp; Conditions.
-                            As an investor, you have various options: using trading software, consulting with human
-                            brokers, or making independent trading decisions. The choice ultimately lies with you.
-                        </p>
+                        {{ range .Site.Params.footertext }}
+                        <p>{{ . }}</p>
+                        {{ end }}
                     </div>
                 </div>
             </div>
@@ -45,7 +26,7 @@
                 <div class="elementor-element elementor-element-5c4d2bd elementor-widget elementor-widget-heading"
                     data-id="5c4d2bd" data-element_type="widget" data-widget_type="heading.default">
                     <div class="elementor-widget-container">
-                        <h2 class="elementor-heading-title elementor-size-default">Company</h2>
+                        <h2 class="elementor-heading-title elementor-size-default">{{.Site.Params.company}}</h2>
                     </div>
                 </div>
                 <div class="elementor-element elementor-element-0661ba0 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -88,7 +69,7 @@
                 <div class="elementor-element elementor-element-8c1cd0e elementor-widget elementor-widget-text-editor"
                     data-id="8c1cd0e" data-element_type="widget" data-widget_type="text-editor.default">
                     <div class="elementor-widget-container">
-                        <p>© 2025 Quantum AI. All rights reserved.</p>
+                        <p>{{.Site.Copyright}}</p>
                     </div>
                 </div>
             </div>

@@ -9,14 +9,14 @@
                 data-id="906fbdc" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
                     <h2 class="elementor-heading-title elementor-size-default">
-                        {{.Title}}
+                        {{$.Title}}
                     </h2>
                 </div>
             </div>
             <div class="elementor-element elementor-element-5c003e6 elementor-widget elementor-widget-text-editor"
                 data-id="5c003e6" data-element_type="widget" data-widget_type="text-editor.default">
                 <div class="elementor-widget-container">
-                    <p>{{.Description}}</p>
+                    <p>{{$.Description}}</p>
                 </div>
             </div>
             {{with .rating}}
@@ -131,7 +131,7 @@
                     <div class="elementor-element elementor-element-4432e0a elementor-widget elementor-widget-text-editor"
                         data-id="4432e0a" data-element_type="widget" data-widget_type="text-editor.default">
                         <div class="elementor-widget-container">
-                            <p>{{.text}}<span style="color: #34d399;">{{.users}}</span></p>
+                            <p>{{.text | safeHTML}}<span style="color: #34d399;">{{.users}}</span></p>
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                 <div class="elementor-element elementor-element-e29daeb elementor-widget elementor-widget-heading"
                     data-id="e29daeb" data-element_type="widget" data-widget_type="heading.default">
                     <div class="elementor-widget-container">
-                        <h2 class="elementor-heading-title elementor-size-default">Sign up now
+                        <h2 class="elementor-heading-title elementor-size-default">{{.title}}
                         </h2>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="mf-input-wrapper"><input type="text" class="mf-input "
                                                             id="mf-input-text-4e9899f" name="f_name"
-                                                            placeholder="First Name " aria-invalid="false"></div>
+                                                            placeholder="{{.firstname}}" required></div>
                                                 </div>
                                             </div>
                                             <div class="elementor-element elementor-element-2070519 elementor-widget elementor-widget-mf-text"
@@ -199,7 +199,7 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="mf-input-wrapper"><input type="text" class="mf-input "
                                                             id="mf-input-text-2070519" name="L_name"
-                                                            placeholder="Last Name " aria-invalid="false"></div>
+                                                            placeholder="{{.lastname}}" required></div>
                                                 </div>
                                             </div>
                                             <div class="elementor-element elementor-element-ec087ce elementor-widget elementor-widget-mf-email"
@@ -209,7 +209,8 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="mf-input-wrapper"><input type="email" class="mf-input "
                                                             id="mf-input-email-ec087ce" name="u_email"
-                                                            placeholder="Email " aria-invalid="false" value=""></div>
+                                                            placeholder="{{.email}}" required value="">
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="elementor-element elementor-element-fc1b5c7 elementor-widget elementor-widget-mf-telephone"
@@ -219,7 +220,7 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="mf-input-wrapper"><input type="tel" class="mf-input "
                                                             id="mf-input-telephone-fc1b5c7" name="phone"
-                                                            placeholder="Phone " aria-invalid="false">
+                                                            placeholder="{{.phone}}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -230,8 +231,8 @@
                                                     <div class="mf-btn-wraper "
                                                         data-mf-form-conditional-logic-requirement="">
                                                         <button type="submit" style="color: white;"
-                                                            class="metform-btn metform-submit-btn " id=""><span>Create
-                                                                Your Free Account
+                                                            class="metform-btn metform-submit-btn " id=""><span>
+                                                                {{.submit}}
                                                             </span></button>
                                                     </div>
                                                 </div>

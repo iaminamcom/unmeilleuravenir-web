@@ -8,12 +8,10 @@
                 <div class="elementor-element elementor-element-37ed972 elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
                     data-id="37ed972" data-element_type="widget" data-widget_type="theme-site-logo.default">
                     <div class="elementor-widget-container">
-                        <a href="https://unmeilleuravenir.com/">
+                        <a href="{{.Site.Home.RelPermalink}}">
                             <img fetchpriority="high" width="1702" height="286"
-                                src="./unmeilleuravenir.com_files/Asset-7-8.png"
-                                class="attachment-full size-full wp-image-19" alt=""
-                                srcset="https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-7-8.png 1702w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-7-8-300x50.png 300w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-7-8-1024x172.png 1024w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-7-8-768x129.png 768w, https://unmeilleuravenir.com/wp-content/uploads/2025/02/Asset-7-8-1536x258.png 1536w"
-                                sizes="(max-width: 1702px) 100vw, 1702px"> </a>
+                                src="/unmeilleuravenir.com_files/Asset-7-8.png"
+                                class="attachment-full size-full wp-image-19" alt="" loading="lazy"></a>
                     </div>
                 </div>
             </div>
@@ -71,10 +69,9 @@
                     data-id="13050dc" data-element_type="widget" data-widget_type="button.default">
                     <div class="elementor-widget-container">
                         <div class="elementor-button-wrapper">
-                            <a class="elementor-button elementor-button-link elementor-size-sm"
-                                href="https://unmeilleuravenir.com/#sign-up">
+                            <a class="elementor-button elementor-button-link elementor-size-sm" href="/#sign-up">
                                 <span class="elementor-button-content-wrapper">
-                                    <span class="elementor-button-text">Sign up</span>
+                                    <span class="elementor-button-text">{{.Site.Params.signup}}</span>
                                 </span>
                             </a>
                         </div>
@@ -87,7 +84,7 @@
                             <div>
                                 {{ with .Translations }}
                                 {{ range . }}
-                                {{$code := .Language.LanguageCode}}
+                                {{$code := .Language.Lang}}
                                 <a href="{{ .RelPermalink }}" hreflang="{{ $code }}">
                                     <img loading="lazy" src="/unmeilleuravenir.com_files/{{$code}}.svg" width="24"
                                         height="24" alt="{{$code}}">

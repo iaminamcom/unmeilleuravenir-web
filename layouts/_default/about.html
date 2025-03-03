@@ -1,0 +1,111 @@
+{{define "main"}}
+
+{{with .Params.section_1}}
+<div class="elementor-element elementor-element-b233fad e-flex e-con-boxed e-con e-parent e-lazyloaded"
+    data-id="b233fad" data-element_type="container">
+    <div class="e-con-inner">
+        <div class="elementor-element elementor-element-2bd1aa4 e-con-full e-flex e-con e-child" data-id="2bd1aa4"
+            style="color: #000000;font-family: 'Roboto', Sans-serif;font-size: 18px;font-weight: 400;"
+            data-element_type="container">
+            <h2><b>{{.title}}</b></h2>
+            {{ range .text }}
+            <p>{{ . }}</p>
+            {{ end }}
+        </div>
+        <div class="elementor-element elementor-element-4c0799a e-con-full e-flex e-con e-child" data-id="4c0799a"
+            data-element_type="container">
+            <img decoding="async" width="800" height="834" src="/unmeilleuravenir.com_files/quantum-ai-1024x576-1.jpg"
+                class="attachment-large size-large wp-image-119" alt="people" loading="lazy"
+                style="border-radius: 20px;min-height: 500px;">
+        </div>
+    </div>
+</div>
+{{end}}
+
+{{with .Params.section_2}}
+<div class="elementor-element elementor-element-b233fad e-flex e-con-boxed e-con e-parent e-lazyloaded"
+    data-id="b233fad" data-element_type="container">
+    <div class="e-con-inner">
+        {{ range .}}
+        <div class="elementor-element elementor-element-d0d9f2f e-con-full e-flex e-con e-child" data-id="d0d9f2f"
+            data-element_type="container">
+            <div class="elementor-element elementor-element-6ad32b7 elementor-widget elementor-widget-heading"
+                data-id="6ad32b7" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container">
+                    <h2 class="elementor-heading-title elementor-size-default"
+                        style="font-family: 'Roboto', Sans-serif;font-size: 14px;font-weight: 400;color: var(--e-global-color-ee767b9);">
+                        {{.date}}
+                    </h2>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-0bd7e67 elementor-widget elementor-widget-icon-box"
+                data-id="0bd7e67" data-element_type="widget" data-widget_type="icon-box.default">
+                <div class="elementor-widget-container">
+                    <div class="elementor-icon-box-wrapper">
+                        <div class="elementor-icon-box-content">
+                            <h3 class="elementor-icon-box-title"
+                                style="color: #000000;text-align: left;font-family: 'Roboto', Sans-serif;font-size: 18px;font-weight: 600;">
+                                <span>{{.title}}</span>
+                            </h3>
+                            <p class="elementor-icon-box-description"
+                                style="color: #475569;text-align: left;font-family: 'Roboto', Sans-serif;">
+                                {{.text}}
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{end}}
+
+{{ with .Params.section_3 }}
+<div class="elementor-element elementor-element-276d812 e-flex e-con-boxed e-con e-parent" data-id="276d812"
+    data-element_type="container">
+    <div class="e-con-inner">
+        <div class="elementor-element elementor-element-a9c6bad e-con-full e-flex e-con e-child" data-id="a9c6bad"
+            data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+            <div class="elementor-element elementor-element-42c6057 elementor-widget__width-inherit elementor-widget elementor-widget-heading"
+                data-id="42c6057" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container">
+                    <h2 class="elementor-heading-title elementor-size-default">{{.title}}
+                    </h2>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-96cfb0b elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor"
+                data-id="96cfb0b" data-element_type="widget" data-widget_type="text-editor.default">
+                <div class="elementor-widget-container">
+                    <p>{{.description}}</p>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-7d16b8e elementor-align-center elementor-widget elementor-widget-button"
+                data-id="7d16b8e" data-element_type="widget" data-widget_type="button.default">
+                <div class="elementor-widget-container">
+                    <div class="elementor-button-wrapper">
+                        {{with .button}}
+                        <a class="elementor-button elementor-button-link elementor-size-sm" href="{{.link}}">
+                            <span class="elementor-button-content-wrapper">
+                                <span class="elementor-button-icon">
+                                    <svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right"
+                                        viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
+                                        </path>
+                                    </svg> </span>
+                                <span class="elementor-button-text">{{.text}}</span>
+                            </span>
+                        </a>
+                        {{end}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{end }}
+
+{{end}}

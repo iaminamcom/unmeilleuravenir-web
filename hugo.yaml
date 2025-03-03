@@ -5,20 +5,38 @@ defaultContentLanguage: fr
 languages:
   fr:
     contentDir: content/fr
-    languageCode: fr
+    languageCode: fr-FR
     languageName: Français
-    params:
-
     title: Quantum AI
     weight: 1
+    copyright: © 2025 Quantum AI. Tous droits réservés.
+    params:
+      signup: S'inscrire
+      company: Entreprise
+      footertext: 
+        - Le trading offre un potentiel de profit, mais il est crucial de se rappeler que des pertes importantes sont également possibles. On estime qu'environ 70% des investisseurs peuvent rencontrer des difficultés financières.
+        - Veuillez noter que les noms sur notre site web, tels que Quantum AI, sont purement à des fins marketing et ne représentent pas d'entités ou de fournisseurs de services spécifiques. Les vidéos de notre site web sont promotionnelles et mettent en scène des acteurs, et non des utilisateurs ou des traders réels.
+        - Nous vous conseillons vivement d'examiner attentivement les Conditions Générales et les Avertissements de toute plateforme de trading tierce que vous envisagez d'utiliser. Il est également important de comprendre vos obligations concernant l'impôt sur les plus-values dans votre juridiction. Par exemple, aux États-Unis, le trading d'options sur matières premières, y compris les contrats de 'prédiction', n'est légal que sur les bourses approuvées par la CFTC ou sous exemption légale.
+        - Au Royaume-Uni, la Financial Conduct Authority (FCA) a publié la déclaration de politique PS20/10, qui interdit la commercialisation, la vente et la distribution de certains Contrats sur la Différence (CFD) et limite les activités promotionnelles pour les CFD et les produits financiers connexes ciblant les résidents britanniques.
+        - "En nous fournissant vos informations personnelles, vous acceptez qu'elles soient partagées avec des tiers offrant des services de trading, comme indiqué dans notre Politique de Confidentialité et nos Conditions Générales. En tant qu'investisseur, vous avez plusieurs options : utiliser un logiciel de trading, consulter des courtiers humains ou prendre des décisions de trading indépendantes. Le choix vous appartient en fin de compte."
+
   en:
     contentDir: content/en
-    languageCode: en
+    languageCode: en-US
     languageName: English
-    params:
-
     title: Quantum AI
     weight: 2
+    copyright: © 2025 Quantum AI. All rights reserved.
+    params:
+      signup: Sign up
+      company: Company
+      footertext: 
+        - Trading offers the potential for profit, but it’s crucial to remember that significant losses are also a possibility. It’s estimated that around 70% of investors may encounter financial difficulties.
+        - Please be aware that the names on our website, such as Quantum AI, are purely for marketing and don’t represent specific entities or service providers. Our website’s videos are promotional and feature actors, not actual users or traders.
+        - We strongly advise you to thoroughly examine the Terms & Conditions and Disclaimers of any third-party trading platforms you consider using. It’s also important to understand your obligations regarding capital gains tax in your jurisdiction. For example, in the US, trading in commodity options, including ‘prediction’ contracts, is legal only on exchanges approved by the CFTC or under legal exemption.
+        - In the UK, the Financial Conduct Authority (FCA) has issued policy statement PS20/10, which bans the marketing, sale, and distribution of certain Contracts for Difference (CFDs) and limits promotional activities for CFDs and related financial products targeting UK residents.
+        - 'By providing your personal information to us, you agree to its sharing with third parties offering trading services, as outlined in our Privacy Policy and Terms & Conditions. As an investor, you have various options: using trading software, consulting with human brokers, or making independent trading decisions. The choice ultimately lies with you.'
+
 
 disableKinds:
   - RSS

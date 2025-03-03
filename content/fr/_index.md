@@ -13,7 +13,13 @@ hero:
         title: As seen on
         logoimage: /unmeilleuravenir.com_files/Screenshot_1.png
         
-    showSignUpform: yes
+    showSignUpform:
+      title: Inscrivez-vous maintenant
+      firstname: Prénom
+      lastname: Nom
+      email: Email
+      phone: Téléphone
+      submit: Créez votre compte gratuit
 
 logos:
     - ethereum-classic.png
